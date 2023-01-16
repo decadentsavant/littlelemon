@@ -1,45 +1,55 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color1: #495e57;
+    --primary-color2: #f4ce14;
+    --secondary-color1: #ee9972;
+    --secondary-color2: #fbdabb;
+    --secondary-color3: #edefee;
+    --secondary-color4: #333333;
+    --font-markazi: "Markazi Text", serif;
+    --font-karla: "Karla", sans-serif;
 }
 
 section {
-  border-style: dotted;
-  border-color: red;
+    border-style: dotted;
+    border-color: red;
 }
 
 .nav--main {
-  display: flex;
-  align-items: center;
-  height: 90px;
-  max-width: ;
-  padding: 30px, 10px;
-  border-style: dotted;
-  border-color: red;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    padding: 30px, 10px;
+    font-family: var(--font-markazi);
+    border-style: dotted;
+    border-color: red;
 }
 
 .nav--list {
-  list-style-type: none;
-  text-transform: uppercase;
+    list-style-type: none;
+    text-transform: uppercase;
 }
 
 .nav--list li {
-  float: left;
-  padding: 15px
+    float: left;
+    padding: 15px;
 }
 
-
 .section--hero {
-  background-color: #495E57;
+    background-color: var(--primary-color1);
 }
 
 .image--plateOfFood {
-  height: 200px;
+    height: 200px;
 }
 
 .section--about-card {
-  background-color: #495E57;
+    background-color: var(--primary-color1);
 }
 
 .section--about-chefs {
-  height: 200px;
+    height: 200px;
 }
