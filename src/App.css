@@ -3,6 +3,8 @@
 }
 
 :root {
+    --max-width: 1080px;
+    --default-margin-page: 0 auto;
     --primary-color1: #495e57;
     --primary-color2: #f4ce14;
     --secondary-color1: #ee9972;
@@ -11,21 +13,61 @@
     --secondary-color4: #333333;
     --font-markazi: "Markazi Text", serif;
     --font-karla: "Karla", sans-serif;
+    --font-size-default: 18pt;
+    --font-size-display-title: 64pt;
+    --font-size-subtitle: 40pt;
+    --font-size-section-title: 20pt;
+    --border-radius-default: 16pt;
+    --paddingAndMargin-default: 20pt;
 }
 
-section {
-    border-style: dotted;
-    border-color: red;
+img {
+    border-radius: var(--border-radius-default);
 }
 
+button {
+    border: 0 solid transparent;
+    background-color: var(--primary-color2);
+    border-radius: var(--border-radius-default);
+    width: 200px;
+    height: calc(var(--font-size-default) + 30px);
+    margin-bottom: 20px;
+    align-self: center;
+    font-weight: 600;
+}
+
+p,
+h4 {
+    font-family: var(--font-karla);
+    font-size: var(--font-size-default);
+}
+
+.display-title {
+    color: var(--primary-color2);
+    font-family: var(--font-markazi);
+    font-size: var(--font-size-display-title);
+    margin: 0px;
+}
+
+.subtitle {
+    font-family: var(--font-markazi);
+    font-size: var(--font-size-subtitle);
+    margin: 0px;
+}
+
+/* NAV SECTION */
 .nav--main {
+    max-width: var(--max-width);
+    margin: var(--default-margin-page);
     display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 90px;
-    padding: 30px, 10px;
     font-family: var(--font-markazi);
-    border-style: dotted;
-    border-color: red;
+}
+
+.nav--logo {
+    margin-left: var(--paddingAndMargin-default);
 }
 
 .nav--list {
@@ -38,18 +80,192 @@ section {
     padding: 15px;
 }
 
-.section--hero {
+/* HERO SECTION */
+.container--hero {
+    max-width: var(--max-width);
+    margin: var(--default-margin-page);
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+.container--hero-upper {
     background-color: var(--primary-color1);
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr;
+    grid-template-rows: auto;
 }
 
-.image--plateOfFood {
-    height: 200px;
+.container--hero-card {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--paddingAndMargin-default);
+    margin-top: 20px;
 }
 
-.section--about-card {
+.container--hero-card .subtitle {
+    color: var(--secondary-color3);
+}
+
+.container--hero-card-text {
+    color: white;
+}
+
+.plateOfFood {
+    object-fit: scale-down;
+    width: 100%;
+    align-self: end;
+    justify-self: end;
+    position: relative;
+    top: 45px;
+    right: 20px;
+}
+
+/* HIGHLIGHTS SECTION */
+.container--highlights {
+    max-width: var(--max-width);
+    margin: var(--default-margin-page);
+    padding: 0px var(--paddingAndMargin-default);
+}
+
+.container--highlights-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.container--highlights-cards {
+    display: flex;
+    justify-content: space-between;
+    column-gap: var(--paddingAndMargin-default);
+}
+
+.specials-card {
+    background-color: var(--secondary-color3);
+    padding: 0 var(--paddingAndMargin-default);
+    border-radius: var(--border-radius-default);
+    width: 100%;
+}
+
+.specials-card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.specials-card-title-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.specials-card-title-row :nth-child(1) {
+    font-weight: bold;
+}
+.specials-card-title-row :nth-child(2) {
+    color: var(--secondary-color1);
+}
+
+.specials-card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-self: flex-end;
+}
+.specials-card-icon {
+    width: 10%;
+}
+
+/* TESTIMONIALS SECTION */
+.container--testimonials {
+    max-width: var(--max-width);
+    margin: var(--default-margin-page);
+    padding: 0px var(--paddingAndMargin-default);
+}
+
+.container--testimonials-header-row {
+    display: flex;
+    justify-content: center;
+}
+
+.container--testimonials-cards {
+    display: flex;
+    justify-content: space-between;
+    column-gap: var(--paddingAndMargin-default);
+}
+
+.testimonials-card {
+    background-color: var(--secondary-color3);
+    padding: 0 var(--paddingAndMargin-default);
+    border-radius: var(--border-radius-default);
+}
+
+.testimonials-card-stars {
+    display: flex;
+    justify-content: center;
+    margin: var(--paddingAndMargin-default);
+}
+
+.testimonials-card-star-icon {
+    width: 25%;
+}
+
+.testimonials-card-pic-name-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonials-card-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.testimonials-card-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: var(--paddingAndMargin-default);
+}
+
+.testimonials-card-quote {
+    margin: var(--paddingAndMargin-default) 0px;
+}
+
+/* ABOUT SECTION */
+.container--about {
+    max-width: var(--max-width);
+    margin: var(--default-margin-page);
+    padding: var(--paddingAndMargin-default);
+    display: flex;
+    padding-top: 20vh;
+    border: 2px dotted red;
+}
+
+.container--about-card {
     background-color: var(--primary-color1);
+    border-radius: var(--border-radius-default);
+    padding: 20px;
+    margin-right: 20pt;
+    flex: 3;
+    max-height: fit-content;
 }
 
-.section--about-chefs {
-    height: 200px;
+.container-about-photos {
+    background-color: #f4ce14;
+    flex: 2;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.container--about-photo1 {
+    background-color: #ee9972;
+    object-fit: scale-down;
+    max-width: 600px;
+    min-height: 100%;
+    min-height: 20%;
+}
+
+.container--about-photo2 {
+    background-color: #f4ce14;
+    object-fit: scale-down;
 }

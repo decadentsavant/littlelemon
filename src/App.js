@@ -1,12 +1,13 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Nav from "./components/Nav"
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import MenuPage from "./pages/MenuPage";
-import ReservationsPage from "./pages/ReservationsPage";
-import OrderOnlinePage from "./pages/OrderOnlinePage";
-import LoginPage from "./pages/LoginPage";
+import Nav from "./components/Nav";
+import HomePage from "./pages/homepage/HomePage";
+import AboutPage from "./pages/tempWIPPages/AboutPage";
+import MenuPage from "./pages/tempWIPPages/MenuPage";
+import ReservationsPage from "./pages/reservationsPage/ReservationsPage";
+import OrderOnlinePage from "./pages/tempWIPPages/OrderOnlinePage";
+import LoginPage from "./pages/tempWIPPages/LoginPage";
+// import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/orderonline" element={<OrderOnlinePage />} />
                 <Route path="/login" element={<LoginPage />} />
             </Routes>
+            {/* <Footer /> */}
         </>
     );
 }
