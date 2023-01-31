@@ -1,5 +1,5 @@
-import chefs1 from "../../../images/chefs1.jpg";
-import chefs2 from "../../../images/chefs2.jpg";
+import chefs1 from "../../../images/chefs1.png";
+import chefs2 from "../../../images/chefs2.png";
 
 const About = () => {
     return (
@@ -15,15 +15,15 @@ const About = () => {
             </div>
             <div className="container-about-photos">
                 <img
-                src={chefs2}
-                alt="chefs"
-                className="container--about-photo2"
-            ></img>
-                {/* <img
+                    src={chefs2}
+                    alt="chefs"
+                    className="container--about-photo2"
+                ></img>
+                <img
                     src={chefs1}
                     alt="chefs"
                     className="container--about-photo1"
-                ></img> */}
+                ></img>
             </div>
         </div>
     );

@@ -1,271 +1,103 @@
-* {
+:root {
+    /* For max page width */
+    --max-width: 1080px;
+
+    /* Sets left/right margin to center page after reaching max-width */
+    --default-margin-page: 0 auto;
+
+    /* Colors */
+    --clr-primary-1: #495e57;
+    --clr-primary-2: #f4ce14;
+    --clr-secondary-1: #ee9972;
+    --clr-secondary-2: #fbdabb;
+    --clr-recondary-3: #edefee;
+    --clr-secondary-4: #333333;
+
+    /* Font families */
+    --ff-markazi: "Markazi Text", serif;
+    --ff-karla: "Karla", sans-serif;
+
+    /* Font sizes */
+    --fs-display-title: 64pt;
+    --fs-subtitle: 40pt;
+    --fs-section-title: 20pt;
+    --fs-default: 18pt;
+
+    /* Misc */
+    --default-border-radius: 16pt;
+    --default-padding-margin: 20pt;
+}
+
+@media (min-width: 50em) {
+    :root {
+
+    }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-:root {
-    --max-width: 1080px;
-    --default-margin-page: 0 auto;
-    --primary-color1: #495e57;
-    --primary-color2: #f4ce14;
-    --secondary-color1: #ee9972;
-    --secondary-color2: #fbdabb;
-    --secondary-color3: #edefee;
-    --secondary-color4: #333333;
-    --font-markazi: "Markazi Text", serif;
-    --font-karla: "Karla", sans-serif;
-    --font-size-default: 18pt;
-    --font-size-display-title: 64pt;
-    --font-size-subtitle: 40pt;
-    --font-size-section-title: 20pt;
-    --border-radius-default: 16pt;
-    --paddingAndMargin-default: 20pt;
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
 }
 
-img {
-    border-radius: var(--border-radius-default);
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
 }
 
-button {
-    border: 0 solid transparent;
-    background-color: var(--primary-color2);
-    border-radius: var(--border-radius-default);
-    width: 200px;
-    height: calc(var(--font-size-default) + 30px);
-    margin-bottom: 20px;
-    align-self: center;
-    font-weight: 600;
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
 }
 
-p,
-h4 {
-    font-family: var(--font-karla);
-    font-size: var(--font-size-default);
+html,
+height {
+    height: 100%;
 }
 
-.display-title {
-    color: var(--primary-color2);
-    font-family: var(--font-markazi);
-    font-size: var(--font-size-display-title);
-    margin: 0px;
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
 
-.subtitle {
-    font-family: var(--font-markazi);
-    font-size: var(--font-size-subtitle);
-    margin: 0px;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
 }
 
-/* NAV SECTION */
-.nav--main {
-    max-width: var(--max-width);
-    margin: var(--default-margin-page);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-    font-family: var(--font-markazi);
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
 }
 
-.nav--logo {
-    margin-left: var(--paddingAndMargin-default);
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
-.nav--list {
-    list-style-type: none;
-    text-transform: uppercase;
-}
+/* Utility classes */
 
-.nav--list li {
-    float: left;
-    padding: 15px;
-}
-
-/* HERO SECTION */
-.container--hero {
-    max-width: var(--max-width);
-    margin: var(--default-margin-page);
-    display: grid;
-    grid-template-rows: 4fr 1fr;
-}
-
-.container--hero-upper {
-    background-color: var(--primary-color1);
-    display: grid;
-    grid-template-columns: 4fr 1fr 2fr;
-    grid-template-rows: auto;
-}
-
-.container--hero-card {
-    display: flex;
-    flex-direction: column;
-    margin-left: var(--paddingAndMargin-default);
-    margin-top: 20px;
-}
-
-.container--hero-card .subtitle {
-    color: var(--secondary-color3);
-}
-
-.container--hero-card-text {
-    color: white;
-}
-
-.plateOfFood {
-    object-fit: scale-down;
-    width: 100%;
-    align-self: end;
-    justify-self: end;
-    position: relative;
-    top: 45px;
-    right: 20px;
-}
-
-/* HIGHLIGHTS SECTION */
-.container--highlights {
-    max-width: var(--max-width);
-    margin: var(--default-margin-page);
-    padding: 0px var(--paddingAndMargin-default);
-}
-
-.container--highlights-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.container--highlights-cards {
-    display: flex;
-    justify-content: space-between;
-    column-gap: var(--paddingAndMargin-default);
-}
-
-.specials-card {
-    background-color: var(--secondary-color3);
-    padding: 0 var(--paddingAndMargin-default);
-    border-radius: var(--border-radius-default);
-    width: 100%;
-}
-
-.specials-card-image {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-}
-
-.specials-card-title-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.specials-card-title-row :nth-child(1) {
-    font-weight: bold;
-}
-.specials-card-title-row :nth-child(2) {
-    color: var(--secondary-color1);
-}
-
-.specials-card-footer {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    align-self: flex-end;
-}
-.specials-card-icon {
-    width: 10%;
-}
-
-/* TESTIMONIALS SECTION */
-.container--testimonials {
-    max-width: var(--max-width);
-    margin: var(--default-margin-page);
-    padding: 0px var(--paddingAndMargin-default);
-}
-
-.container--testimonials-header-row {
-    display: flex;
-    justify-content: center;
-}
-
-.container--testimonials-cards {
-    display: flex;
-    justify-content: space-between;
-    column-gap: var(--paddingAndMargin-default);
-}
-
-.testimonials-card {
-    background-color: var(--secondary-color3);
-    padding: 0 var(--paddingAndMargin-default);
-    border-radius: var(--border-radius-default);
-}
-
-.testimonials-card-stars {
-    display: flex;
-    justify-content: center;
-    margin: var(--paddingAndMargin-default);
-}
-
-.testimonials-card-star-icon {
-    width: 25%;
-}
-
-.testimonials-card-pic-name-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.testimonials-card-image {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-.testimonials-card-name-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: var(--paddingAndMargin-default);
-}
-
-.testimonials-card-quote {
-    margin: var(--paddingAndMargin-default) 0px;
-}
-
-/* ABOUT SECTION */
-.container--about {
-    max-width: var(--max-width);
-    margin: var(--default-margin-page);
-    padding: var(--paddingAndMargin-default);
-    display: flex;
-    padding-top: 20vh;
-    border: 2px dotted red;
-}
-
-.container--about-card {
-    background-color: var(--primary-color1);
-    border-radius: var(--border-radius-default);
-    padding: 20px;
-    margin-right: 20pt;
-    flex: 3;
-    max-height: fit-content;
-}
-
-.container-about-photos {
-    background-color: #f4ce14;
-    flex: 2;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-}
-
-.container--about-photo1 {
-    background-color: #ee9972;
-    object-fit: scale-down;
-    max-width: 600px;
-    min-height: 100%;
-    min-height: 20%;
-}
-
-.container--about-photo2 {
-    background-color: #f4ce14;
-    object-fit: scale-down;
-}

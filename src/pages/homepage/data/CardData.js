@@ -7,7 +7,7 @@ const cardData = {
             "The famous Greek salad of crispy lettuce, pepper, olives, and Chicago style feta cheese with croutons",
     },
     bruchetta: {
-        image: "bruchetta.svg",
+        image: "bruchetta.png",
         title: "Bruchetta",
         price: "$9.99",
         description:
