@@ -34,16 +34,16 @@ function App() {
             <SideDrawer show={sideDrawerOpen} />
             {sideDrawerOpen ? <BackDrop click={backDropClickHandler} /> : null}
             {/* </SideDrawerOpenContext.Provider> */}
-            {/* <Routes>
+            <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/menu" element={<MenuPage />} />
                 <Route path="/reservations" element={<ReservationsPage />} />
                 <Route path="/orderonline" element={<OrderOnlinePage />} />
                 <Route path="/login" element={<LoginPage />} />
-            </Routes> */}
+            </Routes>
 
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }
