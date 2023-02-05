@@ -12,21 +12,11 @@ const Nav = (props) => (
                 <SideMenu click={props.drawerToggleClickHandler} />
             </div>
             <div className="toolbar_logo">
-                <a href="/">The Logo</a>
+                <img src={logo} alt="logo" />
             </div>
             <div className="spacer" />
             <div className="toolbar_navigation-items">
-                <ul>
-                    <li>
-                        <a href="/">Products</a>
-                    </li>
-                    <li>
-                        <a href="/user">User</a>
-                    </li>
-                    <li>
-                        <a href="/music">Music</a>
-                    </li>
-                </ul>
+                <NavList />
             </div>
         </nav>
     </header>
