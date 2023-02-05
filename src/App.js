@@ -28,6 +28,7 @@ function App() {
 
     return (
         <div style={{ height: "100%" }}>
+            <button onClick={drawerToggleClickHandler}>Toggle</button>
             {/* <SideDrawerOpenContext.Provider value={sideDrawerOpen}> */}
             <Nav drawerToggleClickHandler={drawerToggleClickHandler} />
             <SideDrawer show={sideDrawerOpen} />
