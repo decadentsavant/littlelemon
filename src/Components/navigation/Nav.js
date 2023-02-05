@@ -1,5 +1,4 @@
 import logo from "../../images/logo.svg";
-import { Link } from "react-router-dom";
 import "../../components/navigation/Nav.css";
 import SideMenu from "../navigation/sideMenu/SideMenu";
 import NavList from "./NavList";
