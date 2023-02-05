@@ -2,7 +2,7 @@ import logo from "../images/logo.svg";
 const Footer = () => {
     return (
         <section>
-            <img src={logo} alt="logo" classname="section--footer-logo" />
+            <img src={logo} alt="logo" className="section--footer-logo" />
             <nav>
                 <ul>
                     <li>Home</li>
