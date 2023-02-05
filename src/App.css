@@ -2,12 +2,10 @@
     /* For max page width */
     --max-width: 1080px;
 
-    /* Sets left/right margin to center page after reaching max-width */
-    --default-margin-page: 0 auto;
-
     /* Colors */
     --clr-primary-1: #495e57;
     --clr-primary-2: #f4ce14;
+    --clr-primary-2-accent: #f8e378;
     --clr-secondary-1: #ee9972;
     --clr-secondary-2: #fbdabb;
     --clr-recondary-3: #edefee;
@@ -21,40 +19,53 @@
     --fs-display-title: 64pt;
     --fs-subtitle: 40pt;
     --fs-section-title: 20pt;
-    --fs-default: 18pt;
+    --fs-card-title: 18pt;
+    --fs-button: 20pt;
+    --fs-default: 16pt;
+
+    /* Font weights */
+    --fw-medium: 400;
+    --fw-bold: 500;
+    --fw-extra-bold: 700;
+
+    /* Sizes */
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.25rem;
+    --size-600: 1.5rem;
+    --size-700: 2rem;
+    --size-800: 2.5rem;
+    --size-900: 3rem;
 
     /* Misc */
     --default-border-radius: 16pt;
-    --default-padding-margin: 20pt;
 }
 
+/* Resets & Defaults */
 @media (min-width: 50em) {
     :root {
-
     }
 }
 
-/* Box sizing rules */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Remove default margin */
 * {
     margin: 0;
     padding: 0;
     font: inherit;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
     list-style: none;
 }
 
-/* Set core root defaults */
 html:focus-within {
     scroll-behavior: smooth;
 }
@@ -64,18 +75,19 @@ height {
     height: 100%;
 }
 
-/* Set core body defaults */
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    max-width: min(var(--max-width), 100% - var(--size-700));
+    margin-inline: auto;
+    font-size: var(--fs-default);
+    font-family: var(--ff-karla);
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
 img,
 picture,
 svg {
@@ -99,5 +111,108 @@ svg {
     }
 }
 
-/* Utility classes */
+header {
+    padding-block: var(--size-900);
+}
 
+section {
+    padding-block: var(--size-900);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+    border-radius: var(--default-border-radius);
+    padding: 1em 2em;
+    font-weight: bold;
+    font-size: var(--fs-button);
+    color: black;
+    background-color: var(--clr-primary-2);
+}
+
+.button:hover,
+.button:focus-visible {
+    background-color: var(--clr-primary-2-accent);
+}
+
+.display-title {
+    font-family: var(--ff-markazi);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-display-title);
+    color: var(--clr-primary-2);
+}
+
+.subtitle {
+    font-size: var(--fs-subtitle);
+}
+
+.even-columns {
+    display: grid;
+    gap: var(--size-400);
+}
+
+@media (min-width: 50em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+/* navigation */
+
+.primary-header {
+    /* margin-top: var(--size-700); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuNav {
+    overflow-y: scroll;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    background: darkcyan;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    max-width: 290px;
+    z-index: 9;
+}
+
+.menuNav.showMenu {
+    width: 100%;
+}
+
+/* .mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 50em) {
+    .primary-navigation {
+        display: none;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        padding: 0.5em;
+    }
+
+} */

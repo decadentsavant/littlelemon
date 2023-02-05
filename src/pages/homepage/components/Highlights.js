@@ -3,17 +3,19 @@ import cardData from "../data/CardData";
 
 const Highlights = () => {
     return (
-        <div className="container--highlights">
-            <div className="container--highlights-header-row">
-                <h3 className="subtitle">This week's specials!</h3>
-                <button>Online Menu</button>
+        <section>
+            <div>
+                <div>
+                    <h2>This week's specials!</h2>
+                    <button className="button">Online Menu</button>
+                </div>
+                <div className="container--highlights-cards even-columns">
+                    <SpecialsCard {...cardData.greekSalad} />
+                    <SpecialsCard {...cardData.bruchetta} />
+                    <SpecialsCard {...cardData.lemonDessert} />
+                </div>
             </div>
-            <div className="container--highlights-cards">
-                <SpecialsCard {...cardData.greekSalad} />
-                <SpecialsCard {...cardData.bruchetta} />
-                <SpecialsCard {...cardData.lemonDessert} />
-            </div>
-        </div>
+        </section>
     );
 };
 
