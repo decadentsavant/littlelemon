@@ -1,6 +1,7 @@
+import NavList from "../NavList";
 import "./SideDrawer.css";
 
-const sideDrawer = (props) => {
+function sideDrawer (props) {
     let drawerClasses = ["side-drawer"];
 
     if (props.show) {
@@ -8,17 +9,7 @@ const sideDrawer = (props) => {
     }
     return (
         <nav className={drawerClasses.join(" ")}>
-            <ul>
-                <li>
-                    <a href="/">Product</a>
-                </li>
-                <li>
-                    <a href="/">User</a>
-                </li>
-                <li>
-                    <a href="/">Music</a>
-                </li>
-            </ul>
+            <NavList />
         </nav>
     );
 };
