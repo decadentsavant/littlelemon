@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function NavList () {
     return (
-            <ul aria-label="Primary">
+            <ul className="navList-links" aria-label="Primary">
                 <li>
                     <Link to="/">HOME</Link>
                 </li>

@@ -31,7 +31,7 @@
 
 .side-drawer a {
   text-decoration: none;
-  color: #521751;
+  color: var(--clr-secondary-4);
   font-size: 1.2rem;
 }
 
