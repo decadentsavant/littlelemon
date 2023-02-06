@@ -24,16 +24,11 @@ function App() {
         setSideDrawerOpen(false);
     };
 
-    // const SideDrawerOpenContext = createContext(null);
-
     return (
         <div style={{ height: "100%" }}>
-            <button onClick={drawerToggleClickHandler}>Toggle</button>
-            {/* <SideDrawerOpenContext.Provider value={sideDrawerOpen}> */}
             <Nav drawerToggleClickHandler={drawerToggleClickHandler} />
             <SideDrawer show={sideDrawerOpen} />
             {sideDrawerOpen ? <BackDrop click={backDropClickHandler} /> : null}
-            {/* </SideDrawerOpenContext.Provider> */}
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
