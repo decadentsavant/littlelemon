@@ -4,22 +4,22 @@ function NavList () {
     return (
             <ul aria-label="Primary">
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">HOME</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/about">ABOUT</Link>
                 </li>
                 <li>
-                    <Link to="/menu">Menu</Link>
+                    <Link to="/menu">MENU</Link>
                 </li>
                 <li>
-                    <Link to="/reservations">Reservations</Link>
+                    <Link to="/reservations">RESERVATIONS</Link>
                 </li>
                 <li>
-                    <Link to="/orderonline">Order Online</Link>
+                    <Link to="/orderonline">ORDER ONLINE</Link>
                 </li>
                 <li>
-                    <Link to="/login">Login</Link>
+                    <Link to="/login">LOGIN</Link>
                 </li>
             </ul>
     );
