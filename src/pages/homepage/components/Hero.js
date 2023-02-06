@@ -3,7 +3,7 @@ import "../../homepage/components/Hero.css";
 
 const Hero = () => {
     return (
-        <div className="hero-card-background">
+        <div className="default-padding hero-card-background">
             <section className="hero-card-and-image offset-columns">
                 <div className="hero-card flow">
                     <h1 className="display-title">Little Lemon</h1>

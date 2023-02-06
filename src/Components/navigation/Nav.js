@@ -4,7 +4,7 @@ import SideMenu from "../navigation/sideMenu/SideMenu";
 import NavList from "./NavList";
 
 const Nav = (props) => (
-    <header className="toolbar">
+    <header className="default-padding toolbar">
         <nav className="toolbar_navigator">
             <div className="toggle-btn">
                 <SideMenu click={props.drawerToggleClickHandler} />

@@ -1,12 +1,13 @@
 import SpecialsCard from "./SpecialsCard";
 import cardData from "../data/CardData";
+import "../../homepage/components/Highlights.css";
 
 const Highlights = () => {
     return (
         <section>
-            <div>
-                <div>
-                    <h2>This week's specials!</h2>
+            <div className="default-padding">
+                <div className="highlights-title-and-button">
+                    <h6 className="subtitle extra-bold">This week's specials!</h6>
                     <button className="button">Online Menu</button>
                 </div>
                 <div className="container--highlights-cards even-columns">

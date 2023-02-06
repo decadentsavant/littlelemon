@@ -113,6 +113,18 @@ section {
     color: var(--clr-recondary-3);
 }
 
+.extra-bold{
+    font-weight: var(--fw-extra-bold);
+}
+
+.bold {
+    font-weight: var(--fw-bold);
+}
+
+.default-padding {
+    padding: 0 var(--default-padding);
+}
+
 .button {
     cursor: pointer;
     text-decoration: none;
@@ -141,8 +153,6 @@ section {
 
 .subtitle {
     font-size: var(--fs-subtitle);
-    font-weight: var(--fw-bold);
-    margin: -0.7em 0em 0em 0em;
 }
 
 .visually-hidden {
@@ -175,6 +185,6 @@ section {
 
     .offset-columns {
         grid-auto-flow: column;
-        grid-auto-columns: 5fr 3fr;
+        grid-auto-columns: 1fr;
     }
 }
