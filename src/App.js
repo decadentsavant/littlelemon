@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import Nav from "./components/navigation/Nav";
 import HomePage from "./pages/homepage/HomePage";
 import AboutPage from "./pages/tempWIPPages/AboutPage";
@@ -26,9 +26,13 @@ function App() {
 
     return (
         <div style={{ height: "100%" }}>
-            <Nav drawerToggleClickHandler={drawerToggleClickHandler} />
-            <SideDrawer show={sideDrawerOpen} />
-            {sideDrawerOpen ? <BackDrop click={backDropClickHandler} /> : null}
+            <CloseNavFunctionContext.Provider value={backDropClickHandler}>
+                <Nav drawerToggleClickHandler={drawerToggleClickHandler} />
+                <SideDrawer show={sideDrawerOpen} />
+                {sideDrawerOpen ? (
+                    <BackDrop click={backDropClickHandler} />
+                ) : null}
+            </CloseNavFunctionContext.Provider>
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
@@ -43,4 +47,5 @@ function App() {
     );
 }
 
+export const CloseNavFunctionContext = createContext(null);
 export default App;
