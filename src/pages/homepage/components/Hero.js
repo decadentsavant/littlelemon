@@ -1,16 +1,19 @@
 import plateOfFood from "../../../images/restaurantfood.jpg";
+import "../../homepage/components/Hero.css";
+
 const Hero = () => {
     return (
-        <section className="even-columns">
-                <div>
+        <div className="hero-card-background">
+            <section className="hero-card-and-image offset-columns">
+                <div className="hero-card flow">
                     <h1 className="display-title">Little Lemon</h1>
-                    <p className="subtitle">Chicago</p>
-                    <p className="container--hero-card-text default-text">
+                    <p className="subtitle white">Chicago</p>
+                    <p className="white">
                         A scene. Not a night goes by in which the restauraunt
                         isn't full of athletes, celebrities, stock brokers, and
                         dignitaries.
                     </p>
-                    <p className="container--hero-card-text default-text">
+                    <p className="white">
                         Come rub elbows with your new famous best friends.
                     </p>
                     <button className="button">Reserve a table</button>
@@ -18,9 +21,10 @@ const Hero = () => {
                 <img
                     src={plateOfFood}
                     alt="plate of food"
-                    className="plateOfFood"
+                    className="hero-image"
                 ></img>
-        </section>
+            </section>
+        </div>
     );
 };
 

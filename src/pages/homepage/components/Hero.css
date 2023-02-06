@@ -1,0 +1,28 @@
+.hero-card-background {
+    background: linear-gradient(180deg, var(--clr-primary-1) 80%, white 20%);
+    padding: 0px var(--default-padding)
+}
+
+.hero-card-and-image {
+
+}
+
+
+
+.hero-image {
+/* max-width: 383px; */
+margin-left: auto;
+margin-right: auto;
+}
+
+.offset-columns {
+    display: grid;
+    gap: var(--size-400);
+}
+
+@media (min-width: 50em) {
+    .offset-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 5fr 3fr;
+    }
+}

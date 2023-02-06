@@ -41,13 +41,14 @@
 
     /* Misc */
     --default-border-radius: 16pt;
+    --default-padding: 16pt;
 }
 
 /* Resets & Defaults */
-@media (min-width: 50em) {
+/* @media (min-width: 50em) {
     :root {
     }
-}
+} */
 
 *,
 *::before,
@@ -93,6 +94,7 @@ picture,
 svg {
     max-width: 100%;
     display: block;
+    border-radius: var(--default-border-radius);
 }
 
 header {
@@ -103,12 +105,21 @@ section {
     padding-block: var(--size-900);
 }
 
+.flow > * + * {
+    margin-top: 1em;
+}
+
+.white {
+    color: var(--clr-recondary-3);
+}
+
 .button {
     cursor: pointer;
     text-decoration: none;
     border: 0;
     border-radius: var(--default-border-radius);
     padding: 1em 2em;
+    margin: 1em 0em;
     font-weight: bold;
     font-size: var(--fs-button);
     color: black;
@@ -125,15 +136,13 @@ section {
     font-weight: var(--fw-medium);
     font-size: var(--fs-display-title);
     color: var(--clr-primary-2);
+    white-space: nowrap;
 }
 
 .subtitle {
     font-size: var(--fs-subtitle);
-}
-
-.even-columns {
-    display: grid;
-    gap: var(--size-400);
+    font-weight: var(--fw-bold);
+    margin: -0.7em 0em 0em 0em;
 }
 
 .visually-hidden {
@@ -148,9 +157,24 @@ section {
     border: 0;
 }
 
+.even-columns {
+    display: grid;
+    gap: var(--size-400);
+}
+
+.offset-columns {
+    display: grid;
+    gap: var(--size-400);
+}
+
 @media (min-width: 50em) {
     .even-columns {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
+    }
+
+    .offset-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 5fr 3fr;
     }
 }
