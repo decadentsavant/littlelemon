@@ -1,0 +1,29 @@
+.testimonials-title {
+    text-align: center;
+}
+
+.testimonials-cards {
+    padding: 0 var(--default-padding);
+    padding-top: 2rem;
+}
+
+.testimonials-card {
+    background-color: rgb(172, 172, 172);
+    padding: var(--default-padding);
+}
+
+.testimonials-stars {
+    display: flex;
+    justify-content: center;
+}
+
+.image-name {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--size-500) 0px;
+}
+
+.testimonials-image {
+    width: 40%;
+}

@@ -45,7 +45,7 @@
 }
 
 *,
-*::before,
+*::b
 *::after {
     box-sizing: border-box;
 }
