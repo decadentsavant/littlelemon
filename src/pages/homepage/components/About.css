@@ -1,0 +1,37 @@
+.about-container {
+    padding-top: 150px;
+}
+
+.about-card {
+    background-color: var(--clr-primary-1);
+    padding-top: 5;
+    max-height: 500px;
+}
+
+.about-description {
+    padding-bottom: var(--default-padding);
+}
+
+@media (min-width: 50em) {
+    .about-images > * {
+        position: relative;
+        height: 50%;
+    }
+
+    .about-images-first {
+        top: -10%;
+        left: 23%;
+        max-height: 500px;
+        max-width: 364px;
+        width: auto;
+        height: auto;
+    }
+
+    .about-images-second {
+        top: -20%;
+        max-height: 500px;
+        max-width: 364px;
+        width: auto;
+        height: auto;
+    }
+}

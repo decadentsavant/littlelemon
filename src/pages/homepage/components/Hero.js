@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <div className="default-padding hero-card-background">
             <section className="hero-card-and-image offset-columns">
-                <div className="hero-card flow">
+                <div>
                     <h1 className="display-title">Little Lemon</h1>
                     <p className="subtitle white">Chicago</p>
                     <p className="white">
