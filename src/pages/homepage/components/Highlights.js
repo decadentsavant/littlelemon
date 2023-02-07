@@ -10,7 +10,7 @@ const Highlights = () => {
                     <h6 className="subtitle extra-bold">This week's specials!</h6>
                     <button className="button">Online Menu</button>
                 </div>
-                <div className="container--highlights-cards even-columns">
+                <div className="highlights-cards even-columns">
                     <SpecialsCard {...cardData.greekSalad} />
                     <SpecialsCard {...cardData.bruchetta} />
                     <SpecialsCard {...cardData.lemonDessert} />

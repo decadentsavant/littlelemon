@@ -3,3 +3,43 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.specials-card {
+    background-color: rgb(172, 172, 172);
+    border-top-right-radius: var(--default-border-radius);
+    border-top-left-radius: var(--default-border-radius);
+    flex: 1;
+}
+
+.specials-card-image {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.specials-card-title-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.specials-card-title {
+    white-space: nowrap;
+}
+
+.specials-card-description {
+    height: 8em;
+}
+
+.specials-card-price {
+    color: rgb(234, 31, 31);
+}
+.specials-card-footer {
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.specials-card-footer-image {
+    width: 100px;
+}

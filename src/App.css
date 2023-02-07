@@ -44,12 +44,6 @@
     --default-padding: 16pt;
 }
 
-/* Resets & Defaults */
-/* @media (min-width: 50em) {
-    :root {
-    }
-} */
-
 *,
 *::before,
 *::after {
