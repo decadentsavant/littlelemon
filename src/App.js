@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 import Nav from "./components/navigation/Nav";
 import HomePage from "./pages/homepage/HomePage";
 import AboutPage from "./pages/tempWIPPages/AboutPage";
@@ -8,7 +8,7 @@ import MenuPage from "./pages/tempWIPPages/MenuPage";
 import ReservationsPage from "./pages/reservationsPage/ReservationsPage";
 import OrderOnlinePage from "./pages/tempWIPPages/OrderOnlinePage";
 import LoginPage from "./pages/tempWIPPages/LoginPage";
-import Footer from "./components/Footer";
+import Footer from "./components/navigation/Footer";
 import BackDrop from "./components/navigation/backdrop/BackDrop";
 import SideDrawer from "./components/navigation/sideMenu/SideDrawer";
 
