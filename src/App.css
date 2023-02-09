@@ -45,8 +45,7 @@
 }
 
 *,
-*::b
-*::after {
+*::b *::after {
     box-sizing: border-box;
 }
 
@@ -107,7 +106,7 @@ section {
     color: var(--clr-recondary-3);
 }
 
-.extra-bold{
+.extra-bold {
     font-weight: var(--fw-extra-bold);
 }
 
@@ -135,6 +134,15 @@ section {
 .button:hover,
 .button:focus-visible {
     background-color: var(--clr-primary-2-accent);
+}
+
+button-red:disabled {
+    color: red;
+    background-color: red;
+}
+
+.button:disabled {
+    opacity: .35;
 }
 
 .display-title {

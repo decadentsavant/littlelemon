@@ -1,0 +1,14 @@
+.reservation-form{
+    display: grid;
+    max-width: 600px;
+    gap: 20px
+}
+
+input.input-error,
+select.input-error {
+    border: 3px var(--clr-secondary-1) solid;
+}
+
+.form-error-color {
+    color: var(--clr-secondary-1)
+}
