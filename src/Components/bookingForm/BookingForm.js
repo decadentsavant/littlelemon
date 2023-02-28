@@ -42,6 +42,7 @@ function BookingForm() {
 
     return (
             <form
+                data-testid="form"
                 autoComplete="off"
                 className="reservation-form"
                 onSubmit={handleSubmit}

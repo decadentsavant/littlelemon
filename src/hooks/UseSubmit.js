@@ -16,7 +16,7 @@ const UseSubmit = () => {
             }
             setResponse({
                 type: "success",
-                message: `Thanks for your submission ${data.firstName}. We look forward to seeing you at your scheduled time!`,
+                message: `Thanks for your submission. We look forward to seeing you at your scheduled time!`,
             });
         } catch (error) {
             setResponse({
