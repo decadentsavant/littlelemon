@@ -24,7 +24,7 @@ function BookingForm({ availableTimes, setAvailableTimes, submitForm }) {
         initialValues: {
             email: "",
             date: YYYY + "-" + MM + "-" + DD,
-            time: "",
+            time: availableTimes.times[0],
             guests: "",
             occasion: "birthday",
         },
@@ -33,7 +33,7 @@ function BookingForm({ availableTimes, setAvailableTimes, submitForm }) {
             submitForm(values);
         },
     });
-
+console.log(values)
     return (
         <form
             data-testid="form"
@@ -59,7 +59,7 @@ function BookingForm({ availableTimes, setAvailableTimes, submitForm }) {
             )}
             {/* RESERVATION TIME */}
             <label htmlFor="res-time">Choose time: </label>
-            <select id="res-time">
+            <select id="res-time" name="time" onChange={handleChange} value={values.time}>
                 {availableTimes.times.map((time, index) => {
                     return (
                         <option value={time} key={index}>

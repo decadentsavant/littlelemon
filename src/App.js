@@ -23,6 +23,7 @@ function App() {
     }
     const initialState = initializeTimes();
 
+    // changes reservation times when user changes date
     const [availableTimes, setAvailableTimes] = useReducer(reducer, initialState);
     function reducer(state, action) {
         const newTimes = fetchAPI();
