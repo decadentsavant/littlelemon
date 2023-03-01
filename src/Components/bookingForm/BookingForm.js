@@ -30,13 +30,9 @@ function BookingForm({ availableTimes, setAvailableTimes, submitForm }) {
         },
         validationSchema: basicSchema,
         onSubmit: (values) => {
-            console.log("submitting form with these values -> ", values);
             submitForm(values);
         },
     });
-
-    console.log("state -> ??", values.occasion);
-    console.log("errors are -> ", errors.occasion);
 
     return (
         <form
@@ -52,7 +48,7 @@ function BookingForm({ availableTimes, setAvailableTimes, submitForm }) {
                 id="res-date"
                 // placeholder="Enter your date"
                 defaultValue={YYYY + "-" + MM + "-" + DD}
-                onChange={null}
+                onChange={setAvailableTimes}
                 onBlur={handleBlur}
                 className={errors.date ? "input-error" : ""}
             />{" "}

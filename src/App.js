@@ -14,28 +14,29 @@ import SideDrawer from "./components/navigation/sideMenu/SideDrawer";
 import { fetchAPI, submitAPI } from "./mockServer/mockServer"
 
 function App() {
+    // call mock server to fetch available reservation times
     function initializeTimes() {
         const times = {
             times: [...fetchAPI(new Date())]
         };
         return times;
     }
+    const initialState = initializeTimes();
 
+    const [availableTimes, setAvailableTimes] = useReducer(reducer, initialState);
     function reducer(state, action) {
-        const newBookingDate = action.setBookingDate;
-        const newTimes = fetchAPI(newBookingDate);
+        const newTimes = fetchAPI();
         return { times: [...newTimes] };
     }
 
+    // simple alert for successful reservation.
+    // can navigate to new page, show success, send email, etc in production
     function submitForm(formData) {
         const success = submitAPI(formData);
         if (success) {
             alert("Success!")
         }
     }
-
-    const initialState = initializeTimes();
-    const [availableTimes, setAvailableTimes] = useReducer(reducer, initialState);
 
     const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
 

@@ -6,6 +6,7 @@ test("sanity check", () => {
     expect(true).toBe(true);
 });
 
+// not sure why this fails don't understand error message
 test("renders the BookingForm", () => {
     render(<BookingForm />);
     const formElement = screen.getByTestId("form");
@@ -17,3 +18,4 @@ test("renders the form button", () => {
     const button = screen.getByTestId("button");
     expect(button).toBeInTheDocument();
 });
+
