@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import { basicSchema } from "../../schemas";
 
 function BookingForm({ availableTimes, setAvailableTimes, submitForm }) {
+    // create date object for use in reservation date input field
     const dateNow = new Date();
     dateNow.setDate(dateNow.getDate() + 1);
     const YYYY = dateNow.getFullYear();
