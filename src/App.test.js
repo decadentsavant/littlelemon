@@ -1,16 +1,20 @@
-import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import BookingForm from "./components/bookingForm/BookingForm";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import App from "./App";
+
+
 
 test("sanity check", () => {
     expect(true).toBe(true);
 });
 
-// not sure why this fails
 // BookingForm won't render. Not sure why. Please help.
-
 test("renders the BookingForm", () => {
-    render(<BookingForm />);
+    render(
+            <BookingForm />
+    );
+ 
     const formElement = screen.getByTestId("form");
     expect(formElement).toBeInTheDocument();
 });
@@ -22,3 +26,11 @@ test("renders the form button", () => {
     expect(button).toBeInTheDocument();
 });
 
+// same...
+test("form validation", () => {
+    const mockCallBack = jest.fn();
+    render(<BookingForm />);
+    const button = screen.getByTestId("button");
+    fireEvent.click(button);
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+});

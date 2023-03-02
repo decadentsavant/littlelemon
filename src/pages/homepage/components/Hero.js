@@ -1,5 +1,6 @@
 import plateOfFood from "../../../images/restaurantfood.jpg";
 import "../../homepage/components/Hero.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
@@ -16,7 +17,9 @@ const Hero = () => {
                     <p className="white">
                         Come rub elbows with your new famous best friends.
                     </p>
-                    <button className="button">Reserve a table</button>
+                    <Link to="/reservations">
+                        <button className="button">Reserve a table</button>
+                    </Link>
                 </div>
                 <img
                     src={plateOfFood}
