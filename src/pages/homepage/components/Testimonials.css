@@ -8,7 +8,7 @@
 }
 
 .testimonials-card {
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(172, 172, 172, .85);
     padding: var(--default-padding);
 }
 

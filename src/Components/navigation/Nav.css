@@ -30,7 +30,7 @@
 .navList-links > li > a {
     text-decoration: none;
     white-space: nowrap;
-    color: black;
+    color: #f4ce14;
 }
 
 .toolbar_navigation-items a:hover,

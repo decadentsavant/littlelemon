@@ -5,7 +5,7 @@
 }
 
 .specials-card {
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(172, 172, 172, .85);
     border-top-right-radius: var(--default-border-radius);
     border-top-left-radius: var(--default-border-radius);
     flex: 1;

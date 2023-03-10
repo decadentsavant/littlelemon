@@ -76,6 +76,10 @@ body {
     margin-inline: auto;
     font-size: var(--fs-default);
     font-family: var(--ff-karla);
+    background-image: url("./images/Chicago.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 a:not([class]) {
@@ -189,4 +193,9 @@ button-red:disabled {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
     }
+}
+
+/* color classes */
+.yellow-1{
+    color: var(--clr-primary-2);
 }

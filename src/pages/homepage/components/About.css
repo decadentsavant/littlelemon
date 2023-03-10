@@ -3,7 +3,8 @@
 }
 
 .about-card {
-    background-color: var(--clr-primary-1);
+    /* background-color: var(--clr-primary-1); */
+    background-color: rgba(73, 94, 87, 0.85);
     padding-top: 5;
     max-height: 500px;
 }

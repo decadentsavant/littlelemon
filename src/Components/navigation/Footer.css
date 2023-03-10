@@ -1,6 +1,26 @@
 .footer-links > li > a {
-text-decoration: none;
-color: black;
+ text-decoration: none;
+ /* color: #f4ce14; */
+ color: yellow;
+}
+
+.footer-secondary-lists {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.footer-secondary-lists nav,
+.footer-secondary-lists div
+{
+    align-self: start;
+    padding: 1rem;
+    background-color: rgba(73, 94, 87, 0.75);
+    /* background-color: rgba(255, 255, 255, 0.25); */
+    font-weight: bolder;
+    color: white;
+    border-radius: .5rem;
 }
 
 .footer-container a:hover,

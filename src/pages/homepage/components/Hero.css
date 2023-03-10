@@ -1,5 +1,7 @@
 .hero-card-background {
-    background: linear-gradient(180deg, var(--clr-primary-1) 80%, white 20%);
+    /* background: linear-gradient(180deg, var(--clr-primary-1) 80%, white 20%); */
+    background-color: rgba(73, 94, 87, 0.90);
+    border-radius: .5rem;
 }
 
 .hero-image {
